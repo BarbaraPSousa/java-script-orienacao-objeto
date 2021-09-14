@@ -17,10 +17,10 @@ class ContaCorrente {
   }
 
   deposita(valor) { // função
-    if (this._saldo > 0) {
-      // se saldo for maior que 0
-      this._saldo += valor
+    if (this._saldo <= 0) { // se saldo for menor que 0
+      return;
     }
+    this._saldo += valor
   }
 }
 
@@ -43,6 +43,9 @@ contaCorrentePaulo._saldo =1000;
 contaCorrentePaulo.deposita(100)
 contaCorrentePaulo.deposita(100)
 contaCorrentePaulo.deposita(100)
-contaCorrentePaulo.sacar(50)
+
+const valorSacado = contaCorrentePaulo.sacar(50)
 
 console.log(contaCorrentePaulo)
+console.log(valorSacado)
+
