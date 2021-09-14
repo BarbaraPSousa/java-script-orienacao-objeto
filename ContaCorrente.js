@@ -9,6 +9,12 @@ export class ContaCorrente {
   //#saldo = 0; atributo privado
   _saldo = 0; // atributo privado
 
+  //Contrutor
+  constructor (agencia, cliente){
+    this.agencia = agencia;
+    this.cliente = cliente;
+  }
+
   //Set cliente
   set cliente(novoValor){
     if(novoValor instanceof Cliente){ // se valor passado for igual a cliente
