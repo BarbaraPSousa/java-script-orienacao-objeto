@@ -2,8 +2,10 @@
 
 export class ContaCorrente {
   agencia
+  cliente // associação de atributos
+
   //#saldo = 0; atributo privado
-  _saldo // atributo privado
+  _saldo = 0; // atributo privado
 
   sacar(valor) {
     // função
@@ -15,10 +17,15 @@ export class ContaCorrente {
 
   deposita(valor) {
     // função
-    if (this._saldo <= 0) {
+    if (valor <= 0) {
       // se saldo for menor que 0
       return
     }
     this._saldo += valor
+  }
+
+  tranferir(valor, conta) {
+    const valorSacado = this.sacar(valor) // valor sacado a conta
+    conta.deposita(valor) //depositar valor sacado na conta informada
   }
 }

@@ -2,27 +2,27 @@
 import { Cliente } from './Cliente.js'
 import { ContaCorrente } from './ContaCorrente.js'
 
-const cliente1 = new Cliente() //criando um novo obj
-//atributos obj
+const cliente1 = new Cliente() //intanciando novo obj cliente
 cliente1.nome = 'Paulo'
-cliente1.cpf = 15976398634
+cliente1.cpf = 1239865
 
-const cliente2 = new Cliente() ////criando um novo obj
-//atributos obj
+const cliente2 = new Cliente() 
 cliente2.nome = 'Paula'
-cliente2.cpf = 1569639863
+cliente2.cpf = 555963879
 
-//imprimindo no console obj
-console.log(cliente1)
+const conta1 = new ContaCorrente() // instanciando com asociação de cliente
+conta1.agencia = 1001
+conta1.cliente = cliente1
+conta1.deposita(500)
 
-const contaCorrentePaulo = new ContaCorrente()
-contaCorrentePaulo.agencia = 1001
-contaCorrentePaulo._saldo = 1000
-contaCorrentePaulo.deposita(100)
-contaCorrentePaulo.deposita(100)
-contaCorrentePaulo.deposita(100)
 
-const valorSacado = contaCorrentePaulo.sacar(50)
+const conta2 = new ContaCorrente()
+conta2.agencia = 1002
+conta2.cliente = cliente2
 
-console.log(contaCorrentePaulo)
-console.log(valorSacado)
+
+conta1.tranferir(200, conta2)
+console.log(conta2)
+console.log(conta1)
+
+
