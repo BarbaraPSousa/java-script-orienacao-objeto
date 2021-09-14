@@ -3,6 +3,7 @@
 import { Cliente } from "./Cliente.js";
 
 export class ContaCorrente {
+  static numeroDeConta = 0; //variavel static 
   agencia
   _cliente // associação de atributos
   
@@ -10,9 +11,10 @@ export class ContaCorrente {
   _saldo = 0; // atributo privado
 
   //Contrutor
-  constructor (agencia, cliente){
+  constructor (agencia, cliente, numeroDeConta){
     this.agencia = agencia;
     this.cliente = cliente;
+    ContaCorrente.numeroDeConta += 1 // contador(todas as vez que for instanciado uma conta)
   }
 
   //Set cliente

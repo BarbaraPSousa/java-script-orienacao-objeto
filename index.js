@@ -13,7 +13,7 @@ const conta2 = new ContaCorrente(1002,cliente2)
 let valor = 200;
 conta1.tranferir(valor, conta2)
 
-console.log(conta2)
-//console.log(conta2.saldo) //650
+console.log(ContaCorrente.numeroDeConta)
+
 
 
