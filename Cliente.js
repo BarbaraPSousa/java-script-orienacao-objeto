@@ -1,9 +1,6 @@
 //class cliente
 export class Cliente {
-  nome
-  _cpf
-
-  //Contrutor
+  //Contrutor q inicializa os metodos
   constructor(nome, cpf) {
     this.nome = nome
     this._cpf = cpf
