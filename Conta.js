@@ -40,9 +40,9 @@ export class Conta {
     return 0 //retorna 0 se não tiver valor para sacar
   }
 
+  //metodo abstrado
   sacar(valor) {
-    let taxa = 1
-    return this._saca(valor, taxa)
+    throw new Error('O metodo sacar da conta é Abstrato')
   }
 
   deposita(valor) {
