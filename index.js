@@ -1,5 +1,6 @@
 //importe das class
 import { Cliente } from './Cliente.js'
+import { Conta } from './Conta.js'
 import { ContaCorrente } from './ContaCorrente.js'
 import { ContaPoupaca } from './ContaPoupaca.js'
 
@@ -11,5 +12,8 @@ contaCorrente.sacar(100)
 
 const contaPoupaca = new ContaPoupaca(50, cliente1, 1001)
 
+const conta = new Conta(0,cliente1,1001)
+
 console.log(contaCorrente)
 console.log(contaPoupaca);
+console.log(conta);
