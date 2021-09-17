@@ -1,18 +1,17 @@
 //importe das class
 import { Cliente } from './Cliente.js'
+import {Diretor} from "./Funcionario/Diretor.js"
+import {Gerente} from "./Funcionario/Gerente.js"
+import {SistemaAutenticacao} from "./SistemaAutenticacao.js"
 
-import { ContaCorrente } from './Conta/ContaCorrente.js'
-import { ContaPoupaca } from './Conta/ContaPoupaca.js'
-import { ContaSalario } from './Conta/ContaSalario.js'
 
-const cliente1 = new Cliente('Henrique', 555963879)
+const diretor = new Diretor("Barbara", 1000, 39519322855)
+diretor.cadastraSenha("14593")
 
-const contaCorrente = new ContaCorrente(0, cliente1, 1001)
+const gerente = new Gerente("Estefania", 5000, 98584361754)
+gerente.cadastraSenha("123")
 
-const contaPoupaca = new ContaPoupaca(50, cliente1, 1001)
+const estaLogado = SistemaAutenticacao.login(gerente, "123")
 
-const contaSalario = new ContaSalario(cliente1)
-contaSalario.deposita(150)
-contaSalario.sacar(10)
 
-console.log(contaSalario)
+console.log(estaLogado)
