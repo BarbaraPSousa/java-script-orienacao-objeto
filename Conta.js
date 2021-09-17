@@ -24,18 +24,21 @@ export class Conta {
   }
 
   //funções
-  sacar(valor) {
-    let taxa = 1
+
+  _saca(valor, taxa) {
     const valorSacado = taxa * valor
     if (this._saldo >= valorSacado) {
       this._saldo -= valorSacado
     }
+    return 0 //retorna 0 se não tiver valor para sacar
+  }
+
+  sacar(valor) {
+    let taxa = 1
+    return this._saca(valor, taxa)
   }
 
   deposita(valor) {
-    if (valor <= 100) {
-      return
-    }
     this._saldo += valor
   }
 

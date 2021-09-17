@@ -1,6 +1,5 @@
 //class conta corrente
 
-import { Cliente } from './Cliente.js'
 import { Conta } from './Conta.js'
 
 export class ContaCorrente extends Conta {
@@ -18,9 +17,6 @@ export class ContaCorrente extends Conta {
   sacar(valor) {
     //Sobrecrita
     let taxa = 1.1
-    const valorSacado = taxa * valor
-    if (this._saldo >= valorSacado) {
-      this._saldo -= valorSacado
-    }
+    return this._saca(valor, taxa)
   }
 }
