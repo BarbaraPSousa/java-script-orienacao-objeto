@@ -14,8 +14,8 @@ export class ContaCorrente extends Conta {
   }
 
   //funções
+  //Sobrecrita
   sacar(valor) {
-    //Sobrecrita
     let taxa = 1.1
     return this._saca(valor, taxa)
   }

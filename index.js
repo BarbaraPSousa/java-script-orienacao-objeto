@@ -1,9 +1,9 @@
 //importe das class
 import { Cliente } from './Cliente.js'
 
-import { ContaCorrente } from './ContaCorrente.js'
-import { ContaPoupaca } from './ContaPoupaca.js'
-import { ContaSalario } from './ContaSalario.js'
+import { ContaCorrente } from './Conta/ContaCorrente.js'
+import { ContaPoupaca } from './Conta/ContaPoupaca.js'
+import { ContaSalario } from './Conta/ContaSalario.js'
 
 const cliente1 = new Cliente('Henrique', 555963879)
 
@@ -13,6 +13,6 @@ const contaPoupaca = new ContaPoupaca(50, cliente1, 1001)
 
 const contaSalario = new ContaSalario(cliente1)
 contaSalario.deposita(150)
-contaSalario.sacar(50)
+contaSalario.sacar(10)
 
 console.log(contaSalario)

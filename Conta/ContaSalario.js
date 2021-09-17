@@ -7,6 +7,6 @@ export class ContaSalario extends Conta {
 
   sacar(valor) {
     const taxa = 1.01;
-     return this._saldo(valor, taxa)
+     return this._saca(valor, taxa)
   }
 }
